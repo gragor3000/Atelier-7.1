@@ -7,32 +7,29 @@ session_start();
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
 </head>
 
 <body>
 
 <div id="Main">
-    <div id="index">
-        <form method="post" action="">
-            <input type="radio" required name="class" value="Warrior"> Warrior
-            <input type="radio" required name="class" value="Mage"> Mage
-            <input type="radio" required name="class" value="Clerk"> Clerk
-            <input type="submit" name="submit_btn">
-            <table border="1" cellspacing="0" cellpadding="0" style="width: 482px; height: 85px;" id="yui_3_13_0_2_1446560408929_159">
+    <div id="Menu">
+        <form method="post" action="Action.php">
+            <h1>choisissez votre classe</h1>
+
+            <table border="1" cellspacing="0" cellpadding="0" style="width: 482px; height: 85px;">
                 <tbody>
-                <tr >
+                <tr>
                     <td width="110" valign="top">
                         <p>Classes</p>
                     </td>
                     <td width="110" valign="top">
-                        <p>Guerrier</p>
+                        <p>Warrior</p>
                     </td>
                     <td width="110" valign="top">
-                        <p>Magicien</p>
+                        <p>Mage</p>
                     </td>
                     <td width="110" valign="top">
-                        <p>Clerc</p>
+                        <p>Clerk</p>
                     </td>
                 </tr>
                 <tr>
@@ -79,11 +76,36 @@ session_start();
                 </tr>
                 </tbody>
             </table>
+
+            <table>
+                <tr>
+                    <td>
+                        <input type="radio" required name="class" value="Warrior"> Warrior
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" required name="class" value="Mage"> Mage
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" required name="class" value="Clerk"> Clerk
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" name="SubmitClass">
+                    </td>
+                </tr>
+            </table>
         </form>
     </div>
     <div id="Combat">
-        <input type="text">
-        <input type
+        <form method="post" action="Action.php">
+            <input type="text" disabled>
+            <input type = "text" disabled>
+        </form>
     </div>
 </div>
 
