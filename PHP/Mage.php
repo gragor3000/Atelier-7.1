@@ -6,12 +6,13 @@
  * Time: 10:19
  */
 namespace Atelier;
-Class CMage extends CClass
+include("class.php");
+Class Mage extends CClass
 {
-    function __CMage()
+    function __construct()
     {
-        parent::$Hp = 6;
-        parent::$Attack = 8;
-        parent::$Defence = 3;
+        $this->Hp = 6;
+        $this->Attack = 8;
+        $this->Defense = 3;
     }
 }

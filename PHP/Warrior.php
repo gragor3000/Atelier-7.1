@@ -6,12 +6,12 @@
  * Time: 10:19
  */
 namespace Atelier;
-Class CWarrior extends CClass
+Class Warrior extends CClass
 {
-    function __Warrior()
+    function __construct()
     {
-        parent::$Hp = 10;
-        parent::$Attack = 10;
-        parent::$Defence = 4;
+        $this->Hp = 10;
+        $this->Attack = 10;
+        $this->Defense= 4;
     }
 }

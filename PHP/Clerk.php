@@ -6,12 +6,12 @@
  * Time: 10:19
  */
 namespace Atelier;
-Class CClerk extends CClass
+Class Clerk extends CClass
 {
-    function __CClerk()
+    function __construct()
     {
-        parent::$Hp = 8;
-        parent::$Attack = 9;
-        parent::$Defence = 3;
+        $this->Hp = 8;
+        $this->Attack = 9;
+        $this->Defense = 3;
     }
 }

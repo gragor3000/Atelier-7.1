@@ -7,9 +7,11 @@ session_start();
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="../JS/Atelier.js"></script>
+    <link rel="stylesheet" href="../CSS/Style.css"/>
 </head>
 
-<body>
+<body onload="MainRender()">
 
 <div id="Main">
     <div id="Menu">
@@ -101,10 +103,42 @@ session_start();
             </table>
         </form>
     </div>
+
     <div id="Combat">
         <form method="post" action="Action.php">
-            <input type="text" disabled>
-            <input type = "text" disabled>
+            <table>
+                <tr>
+                    <td>
+                        <h3>Vous</h3>
+                        Attaque: <input type="text" disabled id="P_Att">
+                    </td>
+                    <td>
+                        <h3>Monstre</h3>
+                        Attaque: <input type="text" disabled id="M_Att">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Defense : <input type="text" disabled id="P_Def">
+                    </td>
+                    <td>
+                        Defense : <input type="text" disabled id="M_Def">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Vie : <input type="text" disabled id="P_Vie">
+                    </td>
+                    <td>
+                        Vie : <input type="text" disabled id="M_Vie">
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <input type="submit" name="btn_Att" value="Attaquer">
+            <input type="submit" name="btn_Def" value="Defendre">
+            <input type="submit" name="btn_Flee" value="Fuir">
+            <input type="submit" name="btn_Spec" value="Attaque Special">
         </form>
     </div>
 </div>

@@ -4,8 +4,8 @@
 
 function MainRender(classe)
 {
-    var div = document.getElementById("Main")
-    var div2= document.getElementById("index")
+    var div = document.getElementById("Menu")
+    var div2= document.getElementById("Combat")
     div2.style.display = "none"
     div.style.display = "inline"
 }

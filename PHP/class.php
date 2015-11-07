@@ -6,24 +6,19 @@
  * Time: 10:05
  */
 namespace Atelier;
-Class CClass
+abstract Class CClass
 {
     protected $Hp;
     protected $Attack;
-    protected $Defence;
+    protected $Defense;
 
     public function __get($get)
     {
-         return $this->$get;
+        return $this->$get;
     }
     public function __set($set,$value)
     {
         $this->$set = $value;
     }
-
-
-
-
-
 }
 

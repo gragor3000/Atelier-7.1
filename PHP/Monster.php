@@ -6,12 +6,12 @@
  * Time: 10:59
  */
 namespace Atelier;
-class CMonster extends CClass
+class Monster extends CClass
 {
-    function __Monster()
+    function __construct()
     {
-        parent::$Hp = rand(5,10);
-        parent::$Attack = rand(5,8);
-        parent::$Defence = rand(3,6);
+        $this->Hp = rand(5,10);
+        $this->Attack = rand(5,8);
+        $this->Defense = rand(3,6);
     }
 }
