@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <html>
 
@@ -11,7 +10,7 @@ session_start();
     <link rel="stylesheet" href="../CSS/Style.css"/>
 </head>
 
-<body onload="MainRender()">
+<body>
 
 <div id="Main">
     <div id="Menu">
@@ -104,33 +103,33 @@ session_start();
         </form>
     </div>
 
-    <div id="Combat">
+    <div id="Combat" style="display: none">
         <form method="post" action="Action.php">
             <table>
                 <tr>
                     <td>
                         <h3>Vous</h3>
-                        Attaque: <input type="text" disabled id="P_Att">
+                        Attaque: <input type="text" disabled id="P_Att" name="P_Att">
                     </td>
                     <td>
                         <h3>Monstre</h3>
-                        Attaque: <input type="text" disabled id="M_Att">
+                        Attaque: <input type="text" disabled id="M_Att" name="M_Att">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Defense : <input type="text" disabled id="P_Def">
+                        Defense : <input type="text" disabled id="P_Def" name="P_Def">
                     </td>
                     <td>
-                        Defense : <input type="text" disabled id="M_Def">
+                        Defense : <input type="text" disabled id="M_Def" name="M_Def">
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        Vie : <input type="text" disabled id="P_Vie">
+                        Vie : <input type="text" disabled id="P_Vie" name="P_Vie">
                     </td>
                     <td>
-                        Vie : <input type="text" disabled id="M_Vie">
+                        Vie : <input type="text" disabled id="M_Vie" name="M_Vie">
                     </td>
                 </tr>
             </table>
@@ -138,7 +137,7 @@ session_start();
             <input type="submit" name="btn_Att" value="Attaquer">
             <input type="submit" name="btn_Def" value="Defendre">
             <input type="submit" name="btn_Flee" value="Fuir">
-            <input type="submit" name="btn_Spec" value="Attaque Special">
+            <input type="submit" name="btn_Spec" value="Attaque Special" id="special">
         </form>
     </div>
 </div>
@@ -147,4 +146,3 @@ session_start();
 </body>
 
 </html>
-

@@ -11,6 +11,7 @@ abstract Class CClass
     protected $Hp;
     protected $Attack;
     protected $Defense;
+    protected $Special;
 
     public function __get($get)
     {
@@ -20,5 +21,7 @@ abstract Class CClass
     {
         $this->$set = $value;
     }
+
+    protected abstract function Reset();
 }
 

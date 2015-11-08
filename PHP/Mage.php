@@ -14,5 +14,14 @@ Class Mage extends CClass
         $this->Hp = 6;
         $this->Attack = 8;
         $this->Defense = 3;
+        $this->Special = false;
+    }
+
+    public function Reset()//remet les stats à celles du départs
+    {
+        $this->Hp = 6;
+        $this->Attack = 8;
+        $this->Defense = 3;
+        $this->Special = false;
     }
 }

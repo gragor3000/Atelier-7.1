@@ -13,5 +13,14 @@ Class Warrior extends CClass
         $this->Hp = 10;
         $this->Attack = 10;
         $this->Defense= 4;
+        $this->Special = true;
+    }
+
+    public function Reset()//remet les stats à celles du départs
+    {
+        $this->Hp = 10;
+        $this->Attack = 10;
+        $this->Defense= 4;
+        $this->Special = true;
     }
 }

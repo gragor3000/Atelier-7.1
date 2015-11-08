@@ -13,5 +13,14 @@ Class Clerk extends CClass
         $this->Hp = 8;
         $this->Attack = 9;
         $this->Defense = 3;
+        $this->Special = false;
+    }
+
+    public function Reset()//remet les stats à celles du départs
+    {
+        $this->Hp = 8;
+        $this->Attack = 9;
+        $this->Defense = 3;
+        $this->Special = false;
     }
 }
