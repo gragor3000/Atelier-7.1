@@ -14,6 +14,13 @@ session_start();
 define("PLAYER", 0);
 define("MONSTER", 1);
 
+switch ($_POST['Action'])
+{
+    case "Attack":
+        Attack(MONSTER);
+}
+
+
 if (isset($_POST['SubmitClass'])) {//le joueur choisi sa classe
     CreationClass($_POST['class']);
     CreationMonstre();
@@ -78,7 +85,7 @@ if (isset($_POST['SubmitClass'])) {//le joueur choisi sa classe
             $P_Att = $_SESSION['Class']->__get("Attack");
             $M_Def = $_SESSION['Monstre']->__get("Defense");
             if ($roll < ($P_Att - $M_Def) || $roll == 1) {
-                $degat = rand(1, $roll);
+                $degat = rand(1, $P_Att - $M_Def);
                 $M_Vie = $_SESSION['Monstre']->__get("Hp");
                 $_SESSION['Monstre']->__set("Hp", ($M_Vie - $degat));
                 echo "<script>alert('Attaque réussi : $degat de dégat') </script>";
@@ -94,7 +101,7 @@ if (isset($_POST['SubmitClass'])) {//le joueur choisi sa classe
             $M_Att = $_SESSION['Monstre']->__get("Attack");
             $P_Def = $_SESSION['Class']->__get("Defense");
             if ($roll < ($M_Att - $P_Def) || $roll == 1) {
-                $degat = rand(1, $roll);
+                $degat = rand(1, $M_Att - $P_Def);
                 $P_Vie = $_SESSION['Class']->__get("Hp");
                 $_SESSION['Class']->__set("Hp", ($P_Vie - $degat));
                 echo "<script>alert('Monstre réussi son attaque : $degat de dégat') </script>";
@@ -121,7 +128,7 @@ if (isset($_POST['SubmitClass'])) {//le joueur choisi sa classe
         $M_Att = $_SESSION['Monstre']->__get("Attack");
         $P_Def = $_SESSION['Class']->__get("Defense");
         if ($roll < ($M_Att - $P_Def) || $roll == 1) {
-            $degat = floor(rand(1, $roll) / 2);
+            $degat = floor(rand(1, $M_Att - $P_Def) / 2);
             $P_Vie = $_SESSION['Class']->__get("Hp");
             $_SESSION['Class']->__set("Hp", ($P_Vie - $degat));
             echo "<script>alert('Monstre réussi son attaque : $degat de dégat(réduit de moitié)') </script>";

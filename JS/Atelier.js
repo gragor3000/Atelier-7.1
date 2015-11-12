@@ -40,3 +40,71 @@ function btn_SpecialEnable()
     var btn = document.getElementById("special")
     btn.setAttribute("Enable","")
 }
+
+function AjaxAttack()
+{
+    if (window.XMLHttpRequest)
+    {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        var xmlhttp = new XMLHttpRequest();
+    }
+    else
+    {
+        // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("POST", "Action.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("Action = Attack");
+}
+
+function AjaxDefense()
+{
+    if (window.XMLHttpRequest)
+    {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        var xmlhttp = new XMLHttpRequest();
+    }
+    else
+    {
+        // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("POST", "Action.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("Action = Defense");
+}
+
+function AjaxFlee()
+{
+    if (window.XMLHttpRequest)
+    {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        var xmlhttp = new XMLHttpRequest();
+    }
+    else
+    {
+        // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("POST", "Action.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("Action = Flee");
+}
+
+function AjaxSpecial()
+{
+    if (window.XMLHttpRequest)
+    {
+        // code for IE7+, Firefox, Chrome, Opera, Safari
+        var xmlhttp = new XMLHttpRequest();
+    }
+    else
+    {
+        // code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("POST", "Action.php", true);
+    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xmlhttp.send("Action = Special");
+}

@@ -14,7 +14,7 @@ session_start();
 
 <div id="Main">
     <div id="Menu">
-        <form method="post" action="Action.php">
+        <form>
             <h1>choisissez votre classe</h1>
 
             <table border="1" cellspacing="0" cellpadding="0" style="width: 482px; height: 85px;">
@@ -104,7 +104,7 @@ session_start();
     </div>
 
     <div id="Combat" style="display: none">
-        <form method="post" action="Action.php">
+        <form>
             <table>
                 <tr>
                     <td>
@@ -134,7 +134,7 @@ session_start();
                 </tr>
             </table>
             <br>
-            <input type="submit" name="btn_Att" value="Attaquer">
+            <input type="submit" name="btn_Att" value="Attaquer" onclick="AjaxAttack()">
             <input type="submit" name="btn_Def" value="Defendre">
             <input type="submit" name="btn_Flee" value="Fuir">
             <input type="submit" name="btn_Spec" value="Attaque Special" id="special">
