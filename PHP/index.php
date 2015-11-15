@@ -14,7 +14,7 @@ session_start();
 
 <div id="Main">
     <div id="Menu">
-        <form>
+        <form >
             <h1>choisissez votre classe</h1>
 
             <table border="1" cellspacing="0" cellpadding="0" style="width: 482px; height: 85px;">
@@ -96,7 +96,7 @@ session_start();
                 </tr>
                 <tr>
                     <td>
-                        <input type="submit" name="SubmitClass">
+                        <button type="button" onclick="AjaxClass()"> submit </button>
                     </td>
                 </tr>
             </table>
