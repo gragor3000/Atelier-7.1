@@ -13,6 +13,7 @@ Class Clerk extends CClass
         $this->Hp = 8;
         $this->Attack = 9;
         $this->Defense = 3;
+        $this->Gold = 0;
         $this->Special = false;
     }
 

@@ -13,7 +13,6 @@ abstract Class CClass
     protected $Defense;
     protected $Special;
     protected $Gold;
-    protected $Item;
 
     public function __get($get)
     {

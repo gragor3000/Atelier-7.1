@@ -14,6 +14,7 @@ Class Mage extends CClass
         $this->Hp = 6;
         $this->Attack = 8;
         $this->Defense = 3;
+        $this->Gold = 0;
         $this->Special = false;
     }
 

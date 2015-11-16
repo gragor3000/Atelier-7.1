@@ -13,6 +13,7 @@ class Monster extends CClass
         $this->Hp = rand(5,10);
         $this->Attack = rand(5,8);
         $this->Defense = rand(3,6);
+        $this->Gold = 0;
         $this->Special = true;
     }
 
